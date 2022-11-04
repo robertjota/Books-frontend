@@ -21,7 +21,7 @@ export async function getStaticPaths() {
         paths: data.map(book => ({
             params: {bid: String(book.id)}
         })),
-        fallback: false
+        fallback: 'blocking'
     }
 }
 const BookDetail = ({ book }) => {
